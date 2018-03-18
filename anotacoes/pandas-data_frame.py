@@ -46,4 +46,14 @@ df[bol]
 df[df['W'] > 0][['Y']]
 
 # %%
-df[df['W'] > 0 & df['Y'] > 1]
+df[(df['W'] > 0) & (df['Y'] > 1)]
+
+# %%
+df.reset_index()
+
+# %%
+col = 'SP RJ DF SC AM'.split()
+df['Estado'] = col
+
+# %%
+df.set_index('Estado')
